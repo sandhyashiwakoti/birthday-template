@@ -4,7 +4,7 @@ A beautiful, interactive birthday website template built with React and Vite. Pe
 
 ## Live Demo
 
-Coming soon after deployment!
+**[View Live Site](https://birthday-memory-template.netlify.app/)**
 
 ## Features
 
