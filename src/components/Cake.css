@@ -1,0 +1,112 @@
+.cake-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+}
+
+.action-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.cake-wrapper {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+
+.huge-cake {
+  font-size: 10rem;
+  line-height: 1;
+  display: block;
+}
+
+.huge-cake.blown-out {
+  opacity: 0.8;
+  filter: brightness(0.7);
+}
+
+.flame-overlay {
+  position: absolute;
+  top: -5%;
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.real-flame {
+  width: 17px !important;
+  height: 20px !important;
+  background: radial-gradient(circle at bottom, #fff, #ffcc00, #ff6600);
+  border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
+  box-shadow: 0 0 20px #ff6600;
+  animation: flicker 0.6s infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+.countdown-number {
+  font-size: 5rem;
+  color: #ff2d75;
+  margin: 0;
+  font-weight: 800;
+}
+
+.cake-instruction {
+  color: #ff2d75;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0;
+  min-height: 3rem;
+}
+
+.pulse-text {
+  animation: textPulse 1.5s infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.98); }
+}
+
+.knife-float {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  z-index: 20;
+}
+
+.clickable-cake {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-cake:hover {
+  transform: scale(1.05);
+}
+
+.celebration-title {
+  margin: 10px 0 !important;
+  font-size: 2.5rem !important;
+}
+
+.restart-btn {
+  margin-top: 10px;
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* { box-sizing: border-box; }
+
+body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: #050505; 
+  color: white; 
+  font-family: 'Poppins', sans-serif; 
+  overflow: hidden; 
+}
+
+.particle-layer { 
+  position: fixed; 
+  top: 0; left: 0; 
+  width: 100vw; height: 100vh; 
+  z-index: -1; 
+  pointer-events: none;
+}
+
+
+/* Orb 1: Pink */
+.bg-orb-1 {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 45, 117, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: -2;
+  animation: floatOrb1 15s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Orb 2: Soft Purple */
+.bg-orb-2 {
+  position: fixed;
+  bottom: 20%;
+  right: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(140, 0, 255, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -2;
+  animation: floatOrb2 20s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Animations for the blobs */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -50px) scale(1.1); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 50px) scale(1.2); }
+}
+
+.footer-info {
+  position: absolute;
+  bottom: 20px;
+  color: #555;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+}

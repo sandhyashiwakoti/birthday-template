@@ -1,0 +1,91 @@
+.container { 
+  height: 100vh; 
+  width: 100vw; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative; 
+  z-index: 1; 
+}
+
+.card { 
+  background: #0f0f0f; 
+  width: 90%; 
+  max-width: 1000px; 
+  min-height: 600px; 
+  border-radius: 40px; 
+  border: 1px solid rgba(255, 45, 117, 0.3); 
+  box-shadow: 0 0 80px rgba(0,0,0,0.9); 
+  display: flex; 
+  overflow: hidden; 
+}
+
+.text-side { 
+  flex: 1; 
+  padding: 30px 40px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 100%;
+}
+
+.description { 
+  font-size: 0.95rem; 
+  line-height: 1.6; 
+  color: #bbb; 
+  text-align: justify; 
+  margin-bottom: 20px; 
+}
+
+.button-group { 
+  display: flex; 
+  gap: 15px; 
+  padding-bottom: 10px; 
+}
+.card-inner { display: flex; width: 100%; height: 100%; }
+
+.image-side { flex: 1.2; position: relative; overflow: hidden; height: 100%; }
+.memory-img { width: 100%; height: 100%; object-fit: cover; }
+.vignette { 
+  position: absolute; 
+  top: 0; left: 0; width: 100%; height: 100%; 
+  background: linear-gradient(to right, transparent 0%, #0f0f0f 98%); 
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.title { color: #ff2d75; font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; }
+.first-page-title { 
+  font-size: 2.8rem !important; 
+  text-align: center; 
+  background: linear-gradient(90deg, #ff2d75, #ff82ad, #ff2d75); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: shine 3s linear infinite; 
+}
+
+@keyframes shine { to { background-position: 200% center; } }
+
+.center-text { text-align: center !important; }
+
+.center-group { justify-content: center !important; }
+
+.btn { 
+  background: #ff2d75; color: white; border: none; padding: 12px 24px; border-radius: 50px; 
+  font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: 0.3s; min-width: 140px; 
+}
+.btn:hover { background: #ff4d91; transform: translateY(-3px); color: white !important; }
+.btn-outline { background: transparent; border: 1px solid rgba(255, 45, 117, 0.5); color: #ff2d75; }
+
+@media (max-width: 850px) {
+  .card-inner { flex-direction: column; }
+  .card { height: 90vh; overflow-y: auto; }
+  .image-side { height: 200px; flex: none; }
+  .vignette { background: linear-gradient(to bottom, transparent, #0f0f0f 95%); }
+  .text-side { padding: 25px; }
+}
