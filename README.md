@@ -1,4 +1,6 @@
 # 🎂 Interactive Birthday Memory Website
+[![License: MIT](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 
 A beautiful, interactive birthday website template built with React and Vite. Perfect for creating personalized birthday surprises with memories, photos, and an interactive cake-cutting experience!
 
